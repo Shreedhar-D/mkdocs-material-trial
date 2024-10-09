@@ -1,0 +1,62 @@
+# I am using https://jameswillett.dev/getting-started-with-material-for-mkdocs/#toggle-lightdark-modes
+# and https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/
+
+site_name: My Docs
+site_url: https://sitename.example
+theme:
+  name: material
+  font:
+    text: Merriweather Sans
+    code: Red Hat Mono
+  logo: assets/logo.png
+  favicon: assets/favicon.ico
+  features:
+    - navigation.footer
+  palette:
+    # Dark Mode
+    - scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Dark mode
+      primary: green
+      accent: deep purple
+
+    # Light Mode
+    - scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Light mode
+      primary: blue
+      accent: deep orange
+    
+markdown_extensions:
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - admonition
+  - pymdownx.details
+  
+extra:
+  social:
+    - icon: simple/youtube
+      link: http://www.youtube.com/@krishnadaingade-s1o
+    - icon: simple/linkedin
+      link: www.linkedin.com/in/shreedhar-daingade
+    - icon: simple/github
+      link: https://github.com/Shreedhar-D
+
+copyright: Copyright &copy; 2024 Shreedhar Daingade
